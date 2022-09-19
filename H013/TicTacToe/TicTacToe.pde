@@ -1,5 +1,4 @@
-void setup() {
-
+  void setup() {
   size(500, 500);
   background(255, 255, 255);
 
@@ -20,12 +19,15 @@ void setup() {
 void draw() {
    println(mouseX + "x");
   println(mouseY + "y");
+  
+  switch(click){
+  }
 }
 
 void mousePressed() {
-  boolean click = false;
+  boolean click = true;
     fill(255,255,255);
-    if (click = false);
+    if (click == false);
     ellipse(mouseX, mouseY, 75,75);
   } 
    

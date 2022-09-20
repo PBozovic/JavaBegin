@@ -1,4 +1,7 @@
-  void setup() {
+boolean draw = true;
+int x, y;
+
+void setup() {
   size(500, 500);
   background(255, 255, 255);
 
@@ -13,22 +16,24 @@
     yWaarde = 100;
     xWaarde += 100;
   }
-
 }
 
 void draw() {
-   println(mouseX + "x");
-  println(mouseY + "y");
-  
-  switch(click){
+}
+
+void mouseDragged() {
+  if (mouseX > 50 || mouseY > 50) {
+    if (draw) {
+      stroke(color(0, 0, 255));
+      strokeWeight(2);
+      line(mouseX, mouseY, x, y);
+    }
+    x = mouseX;
+    y = mouseY;
+    draw = true;
   }
 }
 
-void mousePressed() {
-  boolean click = true;
-    fill(255,255,255);
-    if (click == false);
-    ellipse(mouseX, mouseY, 75,75);
-  } 
-   
-  
+void mouseReleased() {
+  draw = false;
+}

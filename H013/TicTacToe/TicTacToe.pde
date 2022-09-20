@@ -4,7 +4,10 @@ int x, y;
 void setup() {
   size(500, 500);
   background(255, 255, 255);
-
+  fill(0,0,0);
+  text("TicTacToe", 225, 60);
+  
+  noFill();
   int xWaarde = 100;
   int yWaarde = 100;
 
@@ -22,7 +25,7 @@ void draw() {
 }
 
 void mouseDragged() {
-  if (mouseX > 50 || mouseY > 50) {
+  if (mouseX > 0 || mouseY > 0) {
     if (draw) {
       stroke(color(0, 0, 255));
       strokeWeight(2);
